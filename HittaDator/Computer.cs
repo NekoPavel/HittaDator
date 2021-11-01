@@ -128,7 +128,7 @@ namespace HittaDator
         {
             try
             {
-                IdLookup idLookup = JsonSerializer.Deserialize<IdLookup>(NetResponseToString("http://sysman.sll.se/SysMan/api/Client?name=" + computerName + "&take=1&skip=0&type=0&targetActive=1"));
+                IdLookup idLookup = JsonSerializer.Deserialize<IdLookup>(NetResponseToString("http://sysman.sll.se/SysMan/api/Client?name=" + computerName + "&take=1&skip=0&type=0"));
                 if (idLookup.result.Count > 0)
                 {
                     PcLookup pcLookup = JsonSerializer.Deserialize<PcLookup>(NetResponseToString("http://sysman.sll.se/SysMan/api/client?id=" + idLookup.result[0].id + "&name=" + idLookup.result[0].name + "&assetTag=" + idLookup.result[0].name));
@@ -219,7 +219,7 @@ namespace HittaDator
         {
             try
             {
-                IdLookup idLookup = JsonSerializer.Deserialize<IdLookup>(NetResponseToString("http://sysman.sll.se/SysMan/api/Client?name=" + computerName + "&take=1&skip=0&type=0&targetActive=1"));
+                IdLookup idLookup = JsonSerializer.Deserialize<IdLookup>(NetResponseToString("http://sysman.sll.se/SysMan/api/Client?name=" + computerName + "&take=1&skip=0&type=0"));
                 if (idLookup.result.Count > 0)
                 {
                     PcLookup pcLookup = JsonSerializer.Deserialize<PcLookup>(NetResponseToString("http://sysman.sll.se/SysMan/api/client?id=" + idLookup.result[0].id + "&name=" + idLookup.result[0].name + "&assetTag=" + idLookup.result[0].name));
