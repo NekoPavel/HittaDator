@@ -98,7 +98,7 @@ namespace HittaDator
         public object managedBy { get; set; }
         public Deployment deployment { get; set; }
         public bool isMt { get; set; }
-        public int hardwareModelId { get; set; }
+        public object hardwareModelId { get; set; }
         public object operatingSystemId { get; set; }
         public OperatingSystem operatingSystem { get; set; }
         public List<object> owners { get; set; }

@@ -111,7 +111,7 @@ namespace HittaDator
         public string macAddress { get; set; }
         public List<object> roles { get; set; }
         public bool isMt { get; set; }
-        public int hardwareModelId { get; set; }
+        public object hardwareModelId { get; set; }
         public HardwareModel hardwareModel { get; set; }
         public object operatingSystemId { get; set; }
         public OperatingSystem operatingSystem { get; set; }
