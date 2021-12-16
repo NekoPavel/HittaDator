@@ -244,12 +244,18 @@ namespace HittaDator
                     {
                         this.macAdressColon = "Info saknas i SysMan";
                     }
-                    this.macAdress = pcLookup.macAddress.Replace(":", "");
+                    if (pcLookup.macAddress != null)
+                    {
+                        this.macAdress = pcLookup.macAddress.Replace(":", "");
+                    }
                     if (this.macAdress == null || this.macAdress.Trim() == "")
                     {
                         this.macAdress = "Info saknas i SysMan";
                     }
-                    this.model = idLookup.result[0].hardwareModel.name;
+                    if (idLookup.result[0].hardwareModel != null)
+                    {
+                        this.model = idLookup.result[0].hardwareModel.name;
+                    }
                     if (this.model == null || this.model.Trim() == "")
                     {
                         this.model = "Info saknas i SysMan";
